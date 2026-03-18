@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RL Gridworld HW1 (Static Version)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RL Gridworld</h1>
+        
+        <div class="controls">
+            <label for="grid-size">Grid Size (n):</label>
+            <input type="number" id="grid-size" min="5" max="9" value="5">
+            <button id="btn-init">Initialize Grid</button>
+            <span id="status-msg">Click a cell to set Start (Green)</span>
+        </div>
+        
+        <div class="params" style="margin-bottom: 20px;">
+            <label>Discount (γ): <input type="number" id="param-gamma" step="0.1" value="0.9" style="width:50px;"></label>
+            <label style="margin-left: 10px;">Step Reward: <input type="number" id="param-step" value="-1" style="width:50px;"></label>
+            <label style="margin-left: 10px;">Goal Reward: <input type="number" id="param-goal" value="0" style="width:50px;"></label>
+        </div>
+        
+        <div id="grid-container"></div>
+        
+        <div class="actions">
+            <button id="btn-eval" disabled>Random Policy & Evaluate</button>
+            <button id="btn-vi" disabled>Run Value Iteration (Optimal)</button>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item"><div class="legend-color start"></div> Start</div>
+            <div class="legend-item"><div class="legend-color goal"></div> Goal</div>
+            <div class="legend-item"><div class="legend-color obstacle"></div> Obstacle</div>
+        </div>
+        
+        <div class="footer-name">Hsin Yu Jou 7114029031</div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
